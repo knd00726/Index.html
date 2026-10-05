@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  git remote add origin https://github.com/knd00726/Index.html.git
+git branch -M main
+git push -u origin main
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f3ec">
+<title>KESHIA DILL | Data Analyst</title>
+<style>
+  :root {
+    --sage: #758875;
+    --sage-dark: #526653;
+    --sage-light: #e5e9df;
+    --cream: #f4f3ec;
+    --paper: #fbfaf6;
+    --brown: #594638;
+    --brown-soft: #806e5d;
+    --ink: #2e382f;
+    --line: #d9d9ce;
+    --white: #fffefa;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; color: var(--ink); background: var(--cream); font: 16px/1.65 Inter, "Segoe UI", Arial, sans-serif; }
+  a { color: inherit; }
+  .shell { width: min(1100px, calc(100% - 48px)); margin: 0 auto; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; border-bottom: 1px solid var(--line); }
+  .wordmark { color: var(--brown); font-family: Georgia, serif; font-size: 20px; font-weight: 700; text-decoration: none; }
+  .nav { display: flex; gap: 28px; align-items: center; }
+  .nav a { color: var(--brown-soft); font-size: 13px; font-weight: 600; text-decoration: none; }
+  .nav a:hover, .contact-links a:hover { color: var(--sage-dark); text-decoration: underline; text-underline-offset: 4px; }
+  .hero { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 56px; padding: 78px 0 82px; }
+  .eyebrow { color: var(--sage-dark); font-size: 11px; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+  h1, h2, h3, p { margin-top: 0; }
+  h1, h2 { color: var(--brown); font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+  h1 { max-width: 650px; margin: 13px 0 19px; font-size: clamp(42px, 6vw, 68px); letter-spacing: -.045em; line-height: 1.04; }
+  .hero-copy { max-width: 580px; color: var(--brown-soft); font-size: 17px; }
+  .hero-copy strong { color: var(--brown); font-weight: 650; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 25px; }
+  .button { display: inline-block; padding: 11px 18px; border: 1px solid var(--sage-dark); border-radius: 4px; background: var(--sage-dark); color: white; font-size: 13px; font-weight: 650; text-decoration: none; }
+  .button.secondary { background: transparent; color: var(--sage-dark); }
+  .button:hover { background: var(--brown); border-color: var(--brown); color: white; }
+  .hero-art { position: relative; min-height: 310px; display: grid; place-items: center; overflow: hidden; border-radius: 48% 48% 8px 8px; background: var(--sage-light); }
+  .hero-art:before, .hero-art:after { position: absolute; content: ""; border: 1px solid rgba(82,102,83,.22); border-radius: 50%; }
+  .hero-art:before { width: 220px; height: 220px; }
+  .hero-art:after { width: 280px; height: 280px; }
+  .chart-mark { position: relative; z-index: 1; width: 210px; padding: 20px; border: 1px solid rgba(89,70,56,.12); border-radius: 7px; background: rgba(255,254,250,.86); box-shadow: 0 15px 35px rgba(61,68,53,.08); }
+  .chart-title { margin-bottom: 17px; color: var(--brown-soft); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+  .bars { display: flex; height: 115px; align-items: end; gap: 11px; border-bottom: 1px solid var(--line); background: repeating-linear-gradient(to bottom, transparent 0 27px, rgba(117,136,117,.14) 28px 29px); }
+  .bars i { flex: 1; display: block; border-radius: 3px 3px 0 0; background: var(--sage); }
+  .bars i:nth-child(1) { height: 36%; }.bars i:nth-child(2) { height: 55%; }.bars i:nth-child(3) { height: 45%; background: #aa9273; }.bars i:nth-child(4) { height: 75%; }.bars i:nth-child(5) { height: 64%; background: #aa9273; }.bars i:nth-child(6) { height: 96%; background: var(--sage-dark); }
+  .section { padding: 62px 0; border-top: 1px solid var(--line); }
+  .section-heading { margin-bottom: 27px; }
+  h2 { margin: 7px 0 0; font-size: clamp(30px, 4vw, 40px); letter-spacing: -.025em; line-height: 1.15; }
+  .section-intro { max-width: 640px; margin: 12px 0 0; color: var(--brown-soft); }
+  .overview { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .info-panel { min-height: 190px; padding: 25px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); }
+  .info-panel h3 { margin-bottom: 9px; color: var(--brown); font-family: Georgia, serif; font-size: 21px; font-weight: 500; }
+  .info-panel p { margin-bottom: 0; color: var(--brown-soft); }
+  .skill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .skill-list span { padding: 5px 10px; border: 1px solid #d7ded2; border-radius: 99px; background: #f0f2eb; color: var(--sage-dark); font-size: 12px; }
+  .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .project { overflow: hidden; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); }
+  .project-visual { min-height: 188px; display: grid; place-items: center; padding: 22px; background: var(--sage-light); }
+  .coming { width: 100%; min-height: 140px; display: grid; place-items: center; border: 1px dashed #9aab97; border-radius: 4px; color: var(--sage-dark); font-family: Georgia, serif; font-size: 22px; font-style: italic; }
+  .project-info { padding: 19px 20px 21px; }
+  .project-info h3 { margin-bottom: 8px; color: var(--brown); font-family: Georgia, serif; font-size: 21px; font-weight: 500; }
+  .project-info p { min-height: 68px; margin-bottom: 0; color: var(--brown-soft); font-size: 14px; }
+  .about-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 42px; align-items: center; }
+  .headshot { min-height: 280px; display: grid; place-items: center; padding: 20px; border-radius: 47% 47% 6px 6px; background: #e3e5da; color: var(--sage-dark); text-align: center; }
+  .headshot-inner { width: 145px; height: 180px; display: grid; place-items: center; border: 1px dashed #9aa894; border-radius: 48% 48% 5px 5px; font-size: 12px; }
+  .about-copy { color: var(--brown-soft); }
+  .about-copy p:last-child { margin-bottom: 0; }
+  .contact { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 31px 34px; border-radius: 6px; background: var(--sage-dark); color: white; }
+  .contact h2 { margin: 0; color: white; font-size: 30px; }
+  .contact p { margin: 7px 0 0; color: #e4e9df; }
+  .headshot-image {
+  width: 100%;
+  height: 280px;
+  object-fit: scale-down;
+  border-radius: 47% 47% 6px 6px;
+}
+  .contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .contact-links a { display: inline-block; min-width: 125px; padding: 11px 15px; border: 1px solid rgba(255,255,255,.65); border-radius: 4px; color: white; font-size: 13px; font-weight: 650; text-align: center; text-decoration: none; }
+  .contact-links a:first-child { background: var(--paper); border-color: var(--paper); color: var(--sage-dark); }
+  .footer { display: flex; justify-content: space-between; gap: 12px; padding: 24px 0 32px; color: var(--brown-soft); font-size: 12px; }
+  @media (max-width: 760px) {
+    .shell { width: min(100% - 36px, 600px); }
+    .topbar { min-height: 68px; }.nav { gap: 13px; }.nav a { font-size: 11px; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 55px 0; }.hero-art { min-height: 255px; }
+    .overview, .about-grid { grid-template-columns: 1fr; }.projects { grid-template-columns: 1fr; }
+    .project-info p { min-height: auto; }.headshot { min-height: 240px; }
+    .contact { align-items: flex-start; flex-direction: column; padding: 26px; }.footer { flex-direction: column; }
+  }
+  @media (max-width: 420px) { .wordmark { font-size: 17px; }.nav { gap: 9px; }.nav a { font-size: 10px; }.actions .button { font-size: 12px; } }
+</style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="wordmark" href="#top">KESHIA DILL</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#overview">Overview</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main class="shell" id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow">Data Analyst · Portfolio</div>
+        <h1 id="hero-title">Making data clear, useful, and human.</h1>
+        <p class="hero-copy"><strong>Hello, I’m Keshia Dill.</strong> I turn complex information into practical insights that help teams make thoughtful decisions. Welcome to my portfolio.</p>
+        <div class="actions"><a class="button" href="#projects">Explore my projects</a><a class="button secondary" href="#contact">Get in touch</a></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative data chart illustration"><div class="chart-mark"><div class="chart-title">Insight at a glance</div><div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section-heading"><div class="eyebrow">01 · Overview</div><h2>Skills & goals</h2><p class="section-intro">A snapshot of the tools I use and the kind of impact I hope to make through data.</p></div>
+      <div class="overview">
+        <article class="info-panel"><h3>My toolkit</h3><p>The methods and tools I use most often to analyze and visualize data.</p><div class="skill-list"><span>SQL</span><span>Excel</span><span>Data visualization</span><span>Python</span><span>Problem solving</span></div></article>
+        <article class="info-panel"><h3>What I’m working toward</h3><p>My goal is to make reliable, accessible analysis that helps people see what is happening, understand why, and choose what to do next.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading"><div class="eyebrow">02 · Selected work</div><h2>Projects</h2><p class="section-intro">A few examples of how I approach questions with data. Project previews are coming soon.</p></div>
+      <div class="projects">
+        <article class="project"><div class="project-visual"><div class="coming">Coming Soon!</div></div><div class="project-info"><h3>SQL Project</h3><p>Explore a dataset with SQL to answer a focused business question and surface useful trends.</p></div></article>
+        <article class="project"><div class="project-visual"><div class="coming">Coming Soon!</div></div><div class="project-info"><h3>Capstone Project</h3><p>A complete analysis journey: define a question, prepare data, find insights, and share recommendations.</p></div></article>
+        <article class="project"><div class="project-visual"><div class="coming">Coming Soon!</div></div><div class="project-info"><h3>Excel Project</h3><p>Use spreadsheets to organize data, uncover patterns, and present key findings in a clear report.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div class="headshot" role="img" aria-label="<div class="headshot">
+  <img src="headshott.png" alt="Keshia Dill" class="headshot-image">
+        <div><div class="eyebrow">03 · About me</div><h2>Curious by nature.<br>Thoughtful with data.</h2><div class="about-copy"><p>I’m a data analyst who enjoys finding the story behind the numbers. I bring curiosity, care, and a practical mindset to every project, from the first question through the final recommendation.</p><p>As a bartender for 15+ years, I never imagined that I would be doing anything else. I started my journey with data analysis with no prior knowledge. Since the start, I have developed the skills it takes to clean and analyze data properly and effectively.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact"><div><div class="eyebrow" style="color:#dce7d7">04 · Contact</div><h2>Let’s connect</h2><p>Open to conversations, opportunities, and interesting data questions.</p></div><div class="contact-links"><a href="https://www.linkedin.com/in/keshia-dill-a56515441/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:keshia.dill726@gmail.com">Email me ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="shell footer"><span>© 2026 Keshia Dill</span><span>Data Analyst Portfolio</span></footer>
+</body>
+</html>
